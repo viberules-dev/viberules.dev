@@ -2,18 +2,20 @@ import { NextRequest, NextResponse } from 'next/server'
 import { supabase, type UpdateLlmTxtProject } from '../../../../../lib/supabase'
 
 interface RouteParams {
-  params: {
+  params: Promise<{
     id: string
-  }
+  }>
 }
 
 // GET - 获取单个项目
 export async function GET(request: NextRequest, { params }: RouteParams) {
   try {
+    const { id } = await params
+
     const { data, error } = await supabase
       .from('public_llm_txt_projects')
       .select('*')
-      .eq('id', params.id)
+      .eq('id', id)
       .single()
 
     if (error) {
@@ -39,6 +41,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
 // PUT - 更新项目（仅管理员）
 export async function PUT(request: NextRequest, { params }: RouteParams) {
   try {
+    const { id } = await params
     const body: UpdateLlmTxtProject = await request.json()
 
     // 验证 URL 格式（如果提供）
@@ -78,7 +81,7 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
     const { data, error } = await supabase
       .from('llm_txt_projects')
       .update(body)
-      .eq('id', params.id)
+      .eq('id', id)
       .select()
       .single()
 
@@ -111,10 +114,12 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
 // DELETE - 删除项目（仅管理员）
 export async function DELETE(request: NextRequest, { params }: RouteParams) {
   try {
+    const { id } = await params
+
     const { error } = await supabase
       .from('llm_txt_projects')
       .delete()
-      .eq('id', params.id)
+      .eq('id', id)
 
     if (error) {
       return NextResponse.json({ error: error.message }, { status: 500 })
