@@ -58,3 +58,8 @@ body {
     backdrop-filter: blur(24px);
   }
 }
+
+
+.link {
+  @apply text-sm font-medium text-indigo-600 font-semibold transition-colors duration-200 relative;
+}
