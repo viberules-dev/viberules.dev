@@ -71,6 +71,7 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json({ data }, { status: 201 })
   } catch (error) {
+    console.error('Error creating project:', error)
     return NextResponse.json(
       { error: 'Invalid JSON or internal server error' },
       { status: 500 }

@@ -28,6 +28,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
 
     return NextResponse.json({ data })
   } catch (error) {
+    console.error('Error fetching project:', error)
     return NextResponse.json(
       { error: 'Internal server error' },
       { status: 500 }
@@ -99,6 +100,7 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
 
     return NextResponse.json({ data })
   } catch (error) {
+    console.error('Error updating project:', error)
     return NextResponse.json(
       { error: 'Invalid JSON or internal server error' },
       { status: 500 }

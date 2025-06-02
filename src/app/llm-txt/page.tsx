@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Fira_Code } from 'next/font/google'
 import { supabase, type LlmTxtProject } from '../../../lib/supabase'
 
