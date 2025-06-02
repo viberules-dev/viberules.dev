@@ -1,12 +1,13 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { Inter } from 'next/font/google'
+import { Inter, Fira_Code } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
+const firaCode = Fira_Code({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'VibeRules.dev',
+  title: '<VibeRules.dev />',
   description: 'Discover, Share, and Master Coding Rules. A professional community for AI-powered development tools.',
 }
 
@@ -21,15 +22,18 @@ export default function RootLayout({
         {/* Header Navigation */}
         <nav className="fixed top-0 left-0 right-0 h-16 bg-white/90 backdrop-blur-xl border-b border-slate-200/60 z-50 shadow-sm">
           <div className="max-w-6xl mx-auto px-6 h-full flex items-center justify-between">
-            <Link href="/" className="text-xl font-bold bg-gradient-to-r from-indigo-600 via-blue-600 to-purple-600 bg-clip-text text-transparent hover:from-indigo-700 hover:via-blue-700 hover:to-purple-700 transition-all duration-300">
-              VibeRules.dev
+            <Link href="/" className={`text-xl font-bold bg-gradient-to-r from-indigo-600 via-blue-600 to-purple-600 bg-clip-text text-transparent hover:from-indigo-700 hover:via-blue-700 hover:to-purple-700 transition-all duration-300 ${firaCode.className}`}>
+              <span className="text-slate-500">&lt;</span>
+              VibeRules
+              <span className="text-slate-400">.dev</span>
+              <span className="text-slate-500"> /&gt;</span>
             </Link>
             <div className="flex items-center space-x-8">
-              <Link href="/cursor-rules" className="text-sm font-medium text-slate-600 hover:text-indigo-600 transition-colors duration-200 relative group">
+              <Link href="/cursor-rules" className="link">
                 Rules
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-500 to-blue-500 group-hover:w-full transition-all duration-300"></span>
+                <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-indigo-500 to-blue-500 transition-all duration-300"></span>
               </Link>
-              <Link href="/llm-txt" className="text-sm font-medium text-slate-600 hover:text-indigo-600 transition-colors duration-200 relative group">
+              <Link href="/llm-txt" className="link">
                 LLM.txt
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-500 to-blue-500 group-hover:w-full transition-all duration-300"></span>
               </Link>
