@@ -1,48 +1,30 @@
-'use client'
-
 import Link from "next/link";
 import { Fira_Code } from 'next/font/google'
-import { useState, useEffect } from 'react'
+import { supabase, type LlmTxtProject } from '../../../lib/supabase'
 
 const firaCode = Fira_Code({ subsets: ['latin'] })
 
-interface LlmProject {
-  id: string
-  name: string
-  description: string
-  website: string
-  llms_txt: string
-  llms_full_txt?: string
-  tokens: number
-  full_tokens?: number
-  category?: string
-  created_at: string
-  updated_at: string
+async function getProjects(): Promise<LlmTxtProject[]> {
+  if (!supabase) {
+    console.error('Supabase admin client not available')
+    return []
+  }
+
+  const { data, error } = await supabase
+    .from('public_llm_txt_projects')
+    .select('*')
+    .order('created_at', { ascending: false })
+
+  if (error) {
+    console.error('Error fetching projects:', error)
+    return []
+  }
+
+  return data || []
 }
 
-export default function LlmTxtPage() {
-  const [projects, setProjects] = useState<LlmProject[]>([])
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState<string | null>(null)
-
-  useEffect(() => {
-    async function fetchProjects() {
-      try {
-        const response = await fetch('/api/llm-projects')
-        if (!response.ok) {
-          throw new Error('Failed to fetch projects')
-        }
-        const result = await response.json()
-        setProjects(result.data || [])
-      } catch (err) {
-        setError(err instanceof Error ? err.message : 'An error occurred')
-      } finally {
-        setLoading(false)
-      }
-    }
-
-    fetchProjects()
-  }, [])
+export default async function LlmTxtPage() {
+  const projects = await getProjects()
 
   const formatTokens = (tokens: number) => {
     if (tokens >= 1000000) {
@@ -52,27 +34,6 @@ export default function LlmTxtPage() {
       return `${(tokens / 1000).toFixed(1)}K`
     }
     return tokens.toString()
-  }
-
-  if (loading) {
-    return (
-      <main className="max-w-6xl mx-auto px-6 py-8">
-        <div className="text-center py-12">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-emerald-500 mx-auto"></div>
-          <p className="mt-4 text-slate-600">Loading projects...</p>
-        </div>
-      </main>
-    )
-  }
-
-  if (error) {
-    return (
-      <main className="max-w-6xl mx-auto px-6 py-8">
-        <div className="text-center py-12">
-          <p className="text-red-600">Error: {error}</p>
-        </div>
-      </main>
-    )
   }
 
   return (

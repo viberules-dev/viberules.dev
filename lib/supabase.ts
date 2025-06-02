@@ -1,12 +1,11 @@
 import { createClient } from '@supabase/supabase-js'
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-
-export const supabase = createClient(supabaseUrl, supabaseAnonKey)
+const supabaseUrl = process.env.SUPABASE_URL!
+const supabaseServiceKey = process.env.SUPABASE_ANON_KEY!
+export const supabase = createClient(supabaseUrl, supabaseServiceKey)
 
 // Types for our database tables
-export interface LlmProject {
+export interface LlmTxtProject {
   id: string
   name: string
   description: string
@@ -21,7 +20,7 @@ export interface LlmProject {
   updated_at: string
 }
 
-export interface CreateLlmProject {
+export interface CreateLlmTxtProject {
   name: string
   description: string
   website: string
@@ -32,7 +31,7 @@ export interface CreateLlmProject {
   category?: string
 }
 
-export interface UpdateLlmProject {
+export interface UpdateLlmTxtProject {
   name?: string
   description?: string
   website?: string

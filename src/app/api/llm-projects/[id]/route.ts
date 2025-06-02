@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { supabase, type UpdateLlmProject } from '../../../../../lib/supabase'
+import { supabase, type UpdateLlmTxtProject } from '../../../../../lib/supabase'
 
 interface RouteParams {
   params: {
@@ -38,7 +38,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
 // PUT - 更新项目（仅管理员）
 export async function PUT(request: NextRequest, { params }: RouteParams) {
   try {
-    const body: UpdateLlmProject = await request.json()
+    const body: UpdateLlmTxtProject = await request.json()
 
     // 验证 URL 格式（如果提供）
     if (body.website) {

@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { supabase, type CreateLlmProject } from '../../../../lib/supabase'
+import { supabase, type CreateLlmTxtProject } from '../../../../lib/supabase'
 
 // GET - 获取所有已验证的项目
 export async function GET() {
@@ -26,7 +26,7 @@ export async function GET() {
 // POST - 创建新项目（需要后续验证）
 export async function POST(request: NextRequest) {
   try {
-    const body: CreateLlmProject = await request.json()
+    const body: CreateLlmTxtProject = await request.json()
 
     // 基本验证
     if (!body.name || !body.description || !body.website || !body.llms_txt) {
