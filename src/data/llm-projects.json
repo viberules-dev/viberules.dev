@@ -1,0 +1,226 @@
+[
+  {
+    "name": "Bun",
+    "description": "A fast JavaScript runtime, bundler, test runner, and package manager",
+    "website": "https://bun.sh/",
+    "llmsTxt": "https://bun.sh/llms.txt",
+    "tokens": 7618,
+    "category": "Runtime"
+  },
+  {
+    "name": "Cursor",
+    "description": "AI code editor built for productivity",
+    "website": "https://cursor.com/",
+    "llmsTxt": "https://docs.cursor.com/llms.txt",
+    "llmsFullTxt": "https://docs.cursor.com/llms-full.txt",
+    "tokens": 2295,
+    "fullTokens": 44220,
+    "category": "Developer Tools"
+  },
+  {
+    "name": "Stripe",
+    "description": "Payment processing platform for the internet",
+    "website": "https://docs.stripe.com",
+    "llmsTxt": "https://docs.stripe.com/llms.txt",
+    "tokens": 17352,
+    "category": "Payments"
+  },
+  {
+    "name": "Cloudflare",
+    "description": "Web infrastructure and website security",
+    "website": "https://developers.cloudflare.com",
+    "llmsTxt": "https://developers.cloudflare.com/llms.txt",
+    "llmsFullTxt": "https://developers.cloudflare.com/llms-full.txt",
+    "tokens": 33874,
+    "fullTokens": 3770473,
+    "category": "Infrastructure"
+  },
+  {
+    "name": "Prisma",
+    "description": "Next-generation Node.js and TypeScript ORM",
+    "website": "https://prisma.io",
+    "llmsTxt": "https://prisma.io/llms.txt",
+    "llmsFullTxt": "https://prisma.io/llms-full.txt",
+    "tokens": 34107,
+    "fullTokens": 1552557,
+    "category": "Database"
+  },
+  {
+    "name": "Anthropic",
+    "description": "AI safety company and creator of Claude",
+    "website": "https://anthropic.com",
+    "llmsTxt": "https://docs.anthropic.com/llms.txt",
+    "tokens": 510,
+    "category": "AI"
+  },
+  {
+    "name": "Perplexity",
+    "description": "AI-powered search engine",
+    "website": "https://perplexity.ai/",
+    "llmsTxt": "https://docs.perplexity.ai/llms.txt",
+    "llmsFullTxt": "https://docs.perplexity.ai/llms-full.txt",
+    "tokens": 510,
+    "fullTokens": 16583,
+    "category": "AI"
+  },
+  {
+    "name": "CrewAI",
+    "description": "Multi-agent orchestration framework",
+    "website": "https://crewai.com/",
+    "llmsTxt": "https://docs.crewai.com/llms.txt",
+    "llmsFullTxt": "https://docs.crewai.com/llms-full.txt",
+    "tokens": 4194,
+    "fullTokens": 152321,
+    "category": "AI Framework"
+  },
+  {
+    "name": "Pinecone",
+    "description": "Vector database for machine learning",
+    "website": "https://pinecone.io/",
+    "llmsTxt": "https://docs.pinecone.io/llms.txt",
+    "llmsFullTxt": "https://docs.pinecone.io/llms-full.txt",
+    "tokens": 5112,
+    "fullTokens": 70649,
+    "category": "Vector Database"
+  },
+  {
+    "name": "Resend",
+    "description": "Email API for developers",
+    "website": "https://resend.com/",
+    "llmsTxt": "https://resend.com/docs/llms.txt",
+    "llmsFullTxt": "https://resend.com/docs/llms-full.txt",
+    "tokens": 4587,
+    "fullTokens": 148634,
+    "category": "Email"
+  },
+  {
+    "name": "Svelte",
+    "description": "Cybernetically enhanced web apps",
+    "website": "https://svelte.dev/",
+    "llmsTxt": "https://svelte.dev/llms.txt",
+    "llmsFullTxt": "https://svelte.dev/llms-full.txt",
+    "tokens": 281,
+    "fullTokens": 226159,
+    "category": "Framework"
+  },
+  {
+    "name": "DuckDB",
+    "description": "In-process SQL OLAP database management system",
+    "website": "https://duckdb.org/",
+    "llmsTxt": "https://duckdb.org/duckdb-docs.md",
+    "tokens": 999666,
+    "category": "Database"
+  },
+  {
+    "name": "Expo",
+    "description": "Platform for universal React applications",
+    "website": "https://expo.dev/",
+    "llmsTxt": "https://docs.expo.dev/llms.txt",
+    "llmsFullTxt": "https://docs.expo.dev/llms-full.txt",
+    "tokens": 18227,
+    "fullTokens": 330490,
+    "category": "Mobile Development"
+  },
+  {
+    "name": "Raycast",
+    "description": "Extendable launcher for macOS",
+    "website": "https://www.raycast.com/",
+    "llmsTxt": "https://developers.raycast.com/llms.txt",
+    "llmsFullTxt": "https://raw.githubusercontent.com/raycast/extensions/refs/heads/gh-pages/llms-full.txt",
+    "tokens": 1815,
+    "fullTokens": 146964,
+    "category": "Productivity"
+  },
+  {
+    "name": "Supabase",
+    "description": "Open source Firebase alternative",
+    "website": "https://supabase.com/",
+    "llmsTxt": "https://supabase.com/docs/llms.txt",
+    "tokens": 8397,
+    "category": "Backend"
+  },
+  {
+    "name": "Val Town",
+    "description": "Social coding platform",
+    "website": "https://docs.val.town/",
+    "llmsTxt": "https://docs.val.town/llms.txt",
+    "llmsFullTxt": "https://docs.val.town/llms-full.txt",
+    "tokens": 2699,
+    "fullTokens": 50311,
+    "category": "Platform"
+  },
+  {
+    "name": "Dub",
+    "description": "Open-source link management",
+    "website": "https://dub.co/",
+    "llmsTxt": "https://dub.co/docs/llms.txt",
+    "llmsFullTxt": "https://dub.co/docs/llms-full.txt",
+    "tokens": 3027,
+    "fullTokens": 118035,
+    "category": "Tools"
+  },
+  {
+    "name": "Turso",
+    "description": "Edge database based on libSQL",
+    "website": "https://turso.tech/",
+    "llmsTxt": "https://docs.turso.tech/llms.txt",
+    "llmsFullTxt": "https://docs.turso.tech/llms-full.txt",
+    "tokens": 4957,
+    "fullTokens": 81672,
+    "category": "Database"
+  },
+  {
+    "name": "Trigger.dev",
+    "description": "Background job framework for TypeScript",
+    "website": "https://trigger.dev/",
+    "llmsTxt": "https://trigger.dev/docs/llms.txt",
+    "llmsFullTxt": "https://trigger.dev/docs/llms-full.txt",
+    "tokens": 5962,
+    "fullTokens": 187838,
+    "category": "Backend"
+  },
+  {
+    "name": "Upstash",
+    "description": "Serverless data platform",
+    "website": "https://upstash.com/",
+    "llmsTxt": "https://upstash.com/docs/llms.txt",
+    "llmsFullTxt": "https://upstash.com/docs/llms-full.txt",
+    "tokens": 25879,
+    "fullTokens": 595540,
+    "category": "Database"
+  },
+  {
+    "name": "Zapier",
+    "description": "Automation platform",
+    "website": "https://zapier.com/",
+    "llmsTxt": "https://docs.zapier.com/llms.txt",
+    "llmsFullTxt": "https://docs.zapier.com/llms-full.txt",
+    "tokens": 14046,
+    "fullTokens": 263322,
+    "category": "Automation"
+  },
+  {
+    "name": "Answer.AI",
+    "description": "AI research and development company",
+    "website": "https://answer.ai/",
+    "llmsTxt": "https://www.answer.ai/llms.txt",
+    "tokens": 180,
+    "category": "AI"
+  },
+  {
+    "name": "FastHTML",
+    "description": "Modern Python web framework",
+    "website": "https://fastht.ml/",
+    "llmsTxt": "https://docs.fastht.ml/llms.txt",
+    "tokens": 1189,
+    "category": "Framework"
+  },
+  {
+    "name": "Sourcegraph",
+    "description": "Code search and navigation tool",
+    "website": "https://sourcegraph.com/docs",
+    "llmsTxt": "https://sourcegraph.com/docs/llms.txt",
+    "tokens": 1248283,
+    "category": "Developer Tools"
+  }
+]
