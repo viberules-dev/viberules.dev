@@ -119,9 +119,9 @@ export async function DELETE(request: NextRequest, { params }: RouteParams) {
     if (error) {
       return NextResponse.json({ error: error.message }, { status: 500 })
     }
-
     return NextResponse.json({ message: 'Project deleted successfully' })
   } catch (error) {
+    console.error('Error deleting project:', error)
     return NextResponse.json(
       { error: 'Internal server error' },
       { status: 500 }
